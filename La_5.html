@@ -2,51 +2,92 @@
 <html>
     <head>
         <style>
-.tb{
+.m{
     text-align: center;
     margin-left: 20px;
     border: none;
     padding: 10px;
     border-radius: 10px;
 }
-.b{
+.L{
     font-weight: bold; border: none; border-radius: 10px; padding-top: 20px;padding-bottom: 20px;padding-right: 50px;padding-left: 50px; background-color: white; color: lightskyblue; margin-left: 890px; margin-top: 20px;
 }
-.b:hover{
+.L:hover{
     cursor: pointer;
     background-color: blue;
     color: white;
     transition: 0.15s;
 }
-.b:active
+.L:active
 {
     opacity: 0.5;
     transition: 0.15s;
 }
+body{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
         </style>
+        <title>Employee Registration Form</title>
     </head>
     <body style="background-color: lightskyblue;">
-        <h1 style="text-align: center; color: white;">Employee Registration Form</h1>
-        <p style="color: white ; font-size: 20px; margin-left: 650px;" ><br><br>Enter Name
-        <input type="text" placeholder="First Name" class="tb">
-        <input type="text" class="tb"  placeholder="Last name"><br><br>
-        Gender<input type="checkbox"  class="tb"  name="Gender" style="margin-left: 150px;" >
-<label for="Male"> Male</label>
-<input type="checkbox"  name="F" value="Female" style="margin-left: 30px;">Female
-<br><br>
-<label for="coi class:tb " style="display: inline-block;"> Country <br>Of<br> Residence:</p></label>
+        <form onsubmit="myFunction()"></element>
+<h1>EMPLOYEE REGISTRATION FORM</h1>
+    <label > First Name : </label>
+    <input type="text" name="firstname" placeholder="Enter First Name" class="m" required> <br> <br>
+    <label> Last Name : </label>
+    <input type="text" name="lastname"placeholder="Enter Last Name"  class="m"required> <br> <br>
 
-<select name="Country" style=" display: inline-block; position: fixed; top: 250px; left: 900px; border: none; border-radius: 5px; padding: 6px;">
-  <option value="volvo">India</option>
-  <option value="saab">United States</option>
-  <option value="mercedes">Afghanistan</option>
-  <option value="audi">Pakitan</option>
-  <option value="audi">China</option>
-  <option value="audi">Russia</option>
-</select><p style="color: white ; font-size: 20px; margin-left: 650px; " >Email
-        
-<input type="text" class="tb"  placeholder="Email" style="margin-left: 100px; width: 300px;">
-</p>
-<button class="b"> Submit</button>
+    <label style="margin-left: auto;">
+        Country : 
+    </label>
+    <select class="m" style="margin-left: 20px;"required>
+        <option value="Course">Country</option>
+        <option value="B.Tech">India</option>
+        <option value="BBA">Australi</option>
+        <option value="BA">New Zeland</option>
+
+        <option value="MBA">Pakistan</option>
+        <option value="MCA">Sri Lanka</option>
+        <option value="M.Tech">South Africa</option>
+    </select>
+
+    <br>
+    <br>
+    <label>
+    Gender : 
+    </label>
+    <input type="radio" name="Gender" /> Male 
+    <input type="radio" name="Gender" /> Female 
+    <input type="radio" name="Gender" /> Other
+    <br>
+    <br>
+
+    <label>
+    Phone : 
+    </label>
+    <input type="text" name="country code" value="+91" size="1" class="m"required>
+    <input type="text" name="phone" size="0px" class="m" placeholder="Enter Phone Number" required> <br> <br>
+    Address :
+    <br>
+    <textarea cols="80" rows="5" value="address " class="m" style="margin-top: 10px;" required> 
+    </textarea>
+    <br> <br>
+    Email : 
+    <input type="email" id="email" name="email" class="m" placeholder="Enter your E-mail"required> <br>
+    <br> 
+    Password:
+    <input type="Password" id="pass" name="pass" class="m" placeholder="Enter your Password" required> <br>
+    
+
+    <button type="submit" class="L" style="margin-left: 30px;">SUBMIT</button>
+    <script>
+        function myFunction() {
+          alert("The form was submitted");
+        }
+        </script>
+</form>
     </body>
 </html>
